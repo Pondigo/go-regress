@@ -317,12 +317,12 @@ func compareSSIM(a, b gocv.Mat, opts *CompareOptions) (*Result, error) {
 // convertScaleAdd computes: dst = src * alpha + beta (per-element).
 // Uses Mat.ConvertTo which maps to OpenCV's convertTo(dst, type, alpha, beta).
 func convertScaleAdd(src gocv.Mat, alpha, beta float64, dst *gocv.Mat) {
-	src.ConvertToWithParams(dst, gocv.MatTypeCV64F, alpha, beta)
+	src.ConvertToWithParams(dst, gocv.MatTypeCV64F, float32(alpha), float32(beta))
 }
 
 // addScalar adds a scalar value to every element: dst = src + val.
 func addScalar(src gocv.Mat, val float64, dst *gocv.Mat) {
-	src.ConvertToWithParams(dst, gocv.MatTypeCV64F, 1.0, val)
+	src.ConvertToWithParams(dst, gocv.MatTypeCV64F, 1.0, float32(val))
 }
 
 // comparePixel does absolute pixel-by-pixel comparison.
