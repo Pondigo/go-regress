@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	goregress "github.com/cicada/go-regress"
+	goregress "github.com/Pondigo/go-regress"
 
 	"gocv.io/x/gocv"
 )
