@@ -12,9 +12,9 @@ jobs:
     container:
       image: ghcr.io/hybridgroup/opencv:4.8.0
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v9
 
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
 
