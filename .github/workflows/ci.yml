@@ -12,7 +12,7 @@ jobs:
     container:
       image: ghcr.io/hybridgroup/opencv:4.8.0
     steps:
-      - uses: actions/checkout@v9
+      - uses: actions/checkout@v6
 
       - uses: actions/setup-go@v6
         with:
